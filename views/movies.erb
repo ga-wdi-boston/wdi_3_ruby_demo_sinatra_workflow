@@ -1,0 +1,21 @@
+<p>I can put HTML here</p>
+<% "I can put Ruby here. This line does not output to HTML " %>
+<% "Ruby without a = sign at the beginning" %>
+<% "of the ERB block won\'t output to the HTML" %>
+<%= "Putting a = sign allows me to output to HTML" %>
+
+<h5>The following form will attempt to POST parameters to /new_color</h5>
+<form action="/new_movie" method="POST" >
+  <input type="text" name="movie" />
+  <button>Create new movie</button>
+</form>
+
+<p>Variables from the GET '/colors/' route are usable in the Ruby code here</p>
+<p>They must be instance variables, such as @colors</p>
+
+<ul>
+<% @movies.each do |movie| %>
+  <li><%= movie %></li>
+<% end %>
+</ul>
+
